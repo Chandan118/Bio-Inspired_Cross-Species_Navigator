@@ -1,0 +1,7 @@
+# Parameters for the Navigator Node
+navigator_node:
+  ros__parameters:
+    obstacle_distance: 0.5  # meters
+    forward_speed: 0.2      # m/s
+    turn_speed: 0.5         # rad/s
+    gas_threshold: 500      # Threshold for MQ-2 sensor to trigger a behavior

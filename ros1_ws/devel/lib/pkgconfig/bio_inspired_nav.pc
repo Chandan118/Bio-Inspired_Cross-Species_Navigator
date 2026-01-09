@@ -1,0 +1,8 @@
+prefix=/home/chandan/Bio-Inspired_Cross-Species_Navigator/ros1_ws/devel
+
+Name: bio_inspired_nav
+Description: Description of bio_inspired_nav
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

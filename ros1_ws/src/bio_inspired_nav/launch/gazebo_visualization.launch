@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Launch Gazebo with empty world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find bio_inspired_nav)/worlds/bio_nav_world.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="false"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <!-- Spawn robot model in Gazebo -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find bio_inspired_nav)/urdf/bio_robot.urdf.xacro'" />
+  
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" 
+        args="-urdf -model bio_robot -param robot_description -x 0 -y 0 -z 0.1"
+        output="screen" />
+
+  <!-- Robot State Publisher (reads /joint_states and publishes TF) -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+    <param name="publish_frequency" value="30.0"/>
+  </node>
+
+  <!-- Synchronize Gazebo robot with simulation odometry -->
+  <node name="gazebo_sync" pkg="bio_inspired_nav" type="gazebo_sync.py" output="screen"/>
+
+  <!-- TF Publishers -->
+  <node name="odom_to_world_tf" pkg="tf" type="static_transform_publisher" 
+        args="0 0 0 0 0 0 world odom 100"/>
+
+</launch>

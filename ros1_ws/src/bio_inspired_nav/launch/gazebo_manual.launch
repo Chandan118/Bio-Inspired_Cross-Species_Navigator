@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <!-- Arguments -->
+  <arg name="world_name" default="$(find bio_inspired_nav)/worlds/bio_nav_world.world"/>
+  <arg name="robot_name" default="bio_robot"/>
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.0"/>
+  <arg name="z_pos" default="0.1"/>
+  <arg name="yaw" default="0.0"/>
+  <arg name="use_ml" default="true"/>
+  <arg name="training_mode" default="true"/>
+  <arg name="gui" default="true"/>
+  
+  <!-- Start Gazebo with world -->
+  <node name="gazebo" pkg="gazebo_ros" type="$(find gazebo_ros)/scripts/gzserver" 
+        args="$(arg world_name)" 
+        output="screen" required="true"/>
+  
+  <node if="$(arg gui)" name="gazebo_gui" pkg="gazebo_ros" type="$(find gazebo_ros)/scripts/gzclient" 
+        output="screen"/>
+  
+  <!-- Robot description -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find bio_inspired_nav)/urdf/bio_robot.urdf.xacro"/>
+  
+  <!-- Spawn robot -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+        args="-urdf -model $(arg robot_name) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -Y $(arg yaw) -param robot_description"
+        output="screen"/>
+  
+  <!-- Robot state publisher -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  
+  <!-- Joint state publisher -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  
+  <!-- Gas sensor simulator -->
+  <node name="gas_sensor_simulator" pkg="bio_inspired_nav" type="gas_sensor_simulator.py" output="screen">
+    <param name="source_x" value="8.0"/>
+    <param name="source_y" value="8.0"/>
+    <param name="source_strength" value="1000.0"/>
+    <param name="decay_rate" value="0.5"/>
+    <param name="noise_level" value="50.0"/>
+    <param name="wind_direction" value="0.785"/>
+    <param name="wind_strength" value="0.3"/>
+  </node>
+  
+  <!-- Vision processor -->
+  <node name="vision_processor" pkg="bio_inspired_nav" type="vision_processor_cnn.py" output="screen">
+    <param name="use_cnn" value="false"/>
+    <param name="target_class" value="bottle"/>
+  </node>
+  
+  <!-- Bio-inspired navigator with RL -->
+  <node name="bio_navigator_rl" pkg="bio_inspired_nav" type="bio_navigator_rl.py" output="screen">
+    <param name="use_machine_learning" value="$(arg use_ml)"/>
+    <param name="training_mode" value="$(arg training_mode)"/>
+    <param name="model_path" value="/tmp/bio_nav_model"/>
+  </node>
+  
+  <!-- Gas plume tracker -->
+  <node name="gas_plume_tracker" pkg="bio_inspired_nav" type="gas_plume_tracker.py" output="screen"/>
+  
+  <!-- Data logger -->
+  <node name="data_logger" pkg="bio_inspired_nav" type="data_logger.py" output="screen">
+    <param name="log_dir" value="/tmp/bio_nav_logs"/>
+    <param name="enable_plotting" value="false"/>
+  </node>
+  
+  <!-- RViz visualization -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find bio_inspired_nav)/rviz/bio_nav.rviz" if="$(arg gui)"/>
+  
+</launch>

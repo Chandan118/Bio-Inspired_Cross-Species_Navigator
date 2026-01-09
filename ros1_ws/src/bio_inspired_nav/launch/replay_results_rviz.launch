@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Replay speed (100 = 100x faster) -->
+  <arg name="speed" default="100.0"/>
+  
+  <!-- Robot State Publisher -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find bio_inspired_nav)/urdf/bio_robot.urdf.xacro'" />
+  
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+    <param name="publish_frequency" value="30.0"/>
+  </node>
+
+  <!-- Joint State Publisher -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="false"/>
+  </node>
+
+  <!-- Replay simulation data -->
+  <node name="replay_simulation" pkg="bio_inspired_nav" type="replay_simulation.py" 
+        args="/tmp/bio_nav_logs/nav_log_20260101_121310.csv $(arg speed)" output="screen"/>
+
+  <!-- Launch RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find bio_inspired_nav)/rviz/navigation.rviz" required="false"/>
+
+</launch>
