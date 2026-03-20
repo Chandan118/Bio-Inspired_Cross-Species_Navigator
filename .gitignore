@@ -1,0 +1,14 @@
+cat <<EOT >> .gitignore
+# ROS Folders to ignore
+**/build/
+**/devel/
+**/install/
+**/log/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS generated files
+.DS_Store
+EOT
