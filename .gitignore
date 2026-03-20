@@ -1,12 +1,14 @@
-# ROS 2 build artifacts
-build/
-install/
-log/
+cat <<EOT >> .gitignore
+# ROS Folders to ignore
+**/build/
+**/devel/
+**/install/
+**/log/
 
-# Python artifacts
+# Python
 __pycache__/
 *.pyc
-*.pyo
 
-# IDE files
-.vscode/
+# OS generated files
+.DS_Store
+EOT
