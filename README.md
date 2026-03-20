@@ -1,8 +1,8 @@
 # Bio-Inspired Cross-Species Navigator
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![ROS: Noetic](https://img.shields.io/badge/ROS-Noetic-orange.svg)
-![Platform: Intel Loihi 2](https://img.shields.io/badge/Platform-Intel%20Loihi%202-green.svg)
+![ROS: Humble](https://img.shields.io/badge/ROS-Humble-orange.svg)
+![Platform: Jetson Orin Nano](https://img.shields.io/badge/Platform-Jetson%20Orin%20Nano-green.svg)
 ![Status: Submitted](https://img.shields.io/badge/Status-Submitted-yellow.svg)
 
 This project implements a robotic navigation system inspired by the research paper "Evolutionary Convergence of Multimodal Navigation Algorithms in Mammals and Insects." The robot uses a combination of sensors to navigate its environment, mimicking the cross-species principles of path integration and goal-seeking behavior.
