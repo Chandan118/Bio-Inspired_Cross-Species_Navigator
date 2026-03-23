@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 """
-Automated Training System for Bio-Inspired Navigation
-Optimized for long-duration training (4500+ episodes)
-Features: Auto-recovery, checkpoint saving, progress tracking
+automated_training.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Automated Training System for Bio-Inspired Navigation
 """
 
 import rospy

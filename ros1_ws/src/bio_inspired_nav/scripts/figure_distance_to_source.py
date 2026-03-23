@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
 """
-Generate Distance to Source Over Time Figure
-Shows distance_to_source to highlight approach/divergence behavior
+figure_distance_to_source.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Generate Distance to Source Over Time Figure
 """
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np

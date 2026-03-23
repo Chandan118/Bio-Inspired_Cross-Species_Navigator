@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 """
-Simulation Runner for Bio-Inspired Navigation
-Handles training episodes, evaluation, and result generation
+run_simulation.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Simulation Runner for Bio-Inspired Navigation
 """
 
 import rospy

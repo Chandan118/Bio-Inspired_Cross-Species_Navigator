@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 """
-Comprehensive test script for Bio-Inspired Cross-Species Navigator
-This script tests all components of the project to ensure 100% functionality
+test_project.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Comprehensive test script for Bio-Inspired Cross-Species Navigator
 """
 
 import subprocess

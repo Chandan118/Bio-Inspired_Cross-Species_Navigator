@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
 """
-Generate Navigation State Transitions Figure
-Shows plume_state and nav_state changes over time
+figure_state_transitions.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Generate Navigation State Transitions Figure
 """
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np

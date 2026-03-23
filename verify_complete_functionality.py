@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 """
-Complete functionality verification for Bio-Inspired Cross-Species Navigator
-This script runs the entire project and verifies 100% functionality
+verify_complete_functionality.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Complete functionality verification for Bio-Inspired Cross-Species Navigator
 """
 
 import subprocess

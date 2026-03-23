@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 """
-Gazebo Synchronizer - Updates Gazebo robot position based on /odom topic
-This allows visualization of the running simulation in Gazebo
+gazebo_sync.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Gazebo Synchronizer - Updates Gazebo robot position based on /odom topic
 """
 
 import rospy

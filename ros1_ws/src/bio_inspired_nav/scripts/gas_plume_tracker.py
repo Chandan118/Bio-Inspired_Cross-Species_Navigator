@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Gas Plume Tracking with Gradient-Based Learning
-Implements bio-inspired chemotaxis algorithms
+gas_plume_tracker.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Gas Plume Tracking with Gradient-Based Learning
 """
 
 import rospy

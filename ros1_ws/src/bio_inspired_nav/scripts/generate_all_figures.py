@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
 """
-Generate All 6 Key Figures for SUPPLEMENTARY MATERIAL
+generate_all_figures.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Generate All 6 Key Figures for SUPPLEMENTARY MATERIAL
 """
+
 import subprocess
 import sys
 import os

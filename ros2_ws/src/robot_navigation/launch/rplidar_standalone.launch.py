@@ -1,4 +1,16 @@
 #!/usr/bin/env python3
+"""
+rplidar_standalone.launch.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Module for Rplidar Standalone.Launch
+"""
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument

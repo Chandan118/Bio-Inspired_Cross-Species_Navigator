@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 """
-Odometry to TF Broadcaster
-Publishes TF transforms based on odometry data
+odom_to_tf.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Odometry to TF Broadcaster
 """
 
 import rospy
