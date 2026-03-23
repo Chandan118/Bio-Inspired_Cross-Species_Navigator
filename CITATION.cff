@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: "Bio-Inspired Cross-Species Navigator"
+version: "1.0.0"
+date-released: "2025-03-23"
+doi: "10.5281/zenodo.19097072"
+abstract: >-
+  A cross-species bio-inspired navigation framework for autonomous robots integrating ant path integration, bee swarm pheromones, and rodent cognitive mapping strategies.
+license: MIT
+authors:
+  - family-names: Sheikder
+    given-names: Chandan
+    email: chandan@bit.edu.cn
+    affiliation: "Beijing Institute of Technology (BIT)"
+    orcid: "https://orcid.org/0000-0003-1459-8747"
+repository-code: "https://github.com/Chandan118/Bio-Inspired_Cross-Species_Navigator"
+keywords:
+  - "bio-inspired"
+  - "cross-species"
+  - "autonomous navigation"
+  - "ROS 2"
+  - "neuromorphic"
+contact:
+  - name: Chandan Sheikder
+    email: chandan@bit.edu.cn
+    website: "https://chandan118.github.io"
