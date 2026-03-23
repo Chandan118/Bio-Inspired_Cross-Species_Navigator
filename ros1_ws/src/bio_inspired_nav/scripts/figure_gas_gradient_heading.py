@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 """
-Generate Gas Gradient vs. Robot Heading Figure
-Compares gas_gradient with yaw (robot heading)
-Shows alignment during plume tracking
+figure_gas_gradient_heading.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Generate Gas Gradient vs. Robot Heading Figure
 """
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np

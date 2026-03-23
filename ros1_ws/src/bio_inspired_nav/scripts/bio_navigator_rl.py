@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 """
-Bio-Inspired Navigator with Reinforcement Learning
-Implements DQN-based navigation combining multi-sensor fusion
+bio_navigator_rl.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Bio-Inspired Navigator with Reinforcement Learning
 """
 
 import rospy

@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 """
-Data Logger for Bio-Inspired Navigation
-Logs all sensor data, navigation states, and performance metrics
+data_logger.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Data Logger for Bio-Inspired Navigation
 """
 
 import rospy

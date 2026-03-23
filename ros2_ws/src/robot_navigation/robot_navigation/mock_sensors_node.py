@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 """
-Mock sensors node to provide fake LiDAR and IMU data for testing
+mock_sensors_node.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Mock sensors node to provide fake LiDAR and IMU data for testing
 """
 
 import rclpy

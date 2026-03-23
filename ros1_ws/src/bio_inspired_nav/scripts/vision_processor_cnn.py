@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 """
-Vision Processor with CNN-based Object Detection
-Uses pre-trained models for target recognition
+vision_processor_cnn.py
+
+Author      : Chandan Sheikder
+Email       : chandan@bit.edu.cn
+Phone       : +8618222390506
+Affiliation : Beijing Institute of Technology (BIT)
+Date        : 2026-03-23
+
+Description:
+    Vision Processor with CNN-based Object Detection
 """
 
 import rospy

@@ -1,4 +1,11 @@
 #!/bin/bash
+# File        : start_training.sh
+# Author      : Chandan Sheikder
+# Email       : chandan@bit.edu.cn
+# Phone       : +8618222390506
+# Affiliation : Beijing Institute of Technology (BIT)
+# Date        : 2026-03-23
+#
 # Quick Start Script for Automated Training
 # Runs 4500+ episodes with automatic checkpointing
 
