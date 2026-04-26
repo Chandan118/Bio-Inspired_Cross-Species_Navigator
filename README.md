@@ -184,3 +184,5 @@ source /opt/ros/noetic/setup.bash
 source devel/setup.bash
 export DISPLAY=:0
 rviz -d src/bio_inspired_nav/rviz/bio_nav.rviz
+
+<!-- ROS 2 Humble compatible -->
